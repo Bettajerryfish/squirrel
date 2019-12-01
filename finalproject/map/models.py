@@ -69,8 +69,8 @@ class Squirrel(models.Model):
 		)
 
 	specific_location=models.CharField(
-		help_text='specific_location',
                 max_length=100,
+		help_text='specific_location',
 		)
 
 	running=models.BooleanField(
@@ -94,8 +94,8 @@ class Squirrel(models.Model):
 		)
 
 	other_activities=models.CharField(
-		help_text='other_activities',
-                max_length=50,
+		max_length=100,
+                help_text='other_activities',
 		)
 
 	kuks=models.BooleanField(
