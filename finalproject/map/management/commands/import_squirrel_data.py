@@ -1,5 +1,5 @@
 from django.core.management.base import BaseCommand, CommandError
-from squirrels.models import Squirrel
+from map.models import Squirrel
 
 class Command(BaseCommand):
     help = 'import the squirrel data'
