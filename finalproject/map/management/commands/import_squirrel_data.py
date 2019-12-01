@@ -17,7 +17,7 @@ class Command(BaseCommand):
                     latitude = args[1]
                     unique_id = args[2]
                     shift=args[4]
-                    date=args[5][4:]+'-'+args[5][:2]+'+'+args[5][2:4]
+                    date=args[5][4:]+'-'+args[5][:2]+'-'+args[5][2:4]
                     age =args[7]
                     primary_fur_color=args[8]
                     location=args[12]
