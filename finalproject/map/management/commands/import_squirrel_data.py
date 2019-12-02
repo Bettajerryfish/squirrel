@@ -22,20 +22,38 @@ class Command(BaseCommand):
                     primary_fur_color=args[8]
                     location=args[12]
                     specific_location=args[14]
-                    running=args[15]
-                    chasing=args[16]
-                    climbing=args[17]
-                    eating=args[18]
-                    foraging=args[19]
-                    other_activities=args[20]
-                    kuks=args[21]
-                    quaas=args[22]
-                    moans=args[23]
-                    tail_flags=args[24]
-                    tail_twitches=args[25]
-                    approaches=args[26]
-                    indifferent=args[27]
-                    runs_from=args[28]
+
+
+
+                    running = True if args[15].lower()=='true' else False
+                    chasing = True if args[16].lower()=='true' else False
+                    climbing = True if args[17].lower()=='true' else False
+                    eating = True if args[18].lower()=='true' else False
+                    foraging = True if args[19].lower()=='true' else False
+                    other_activities = args[20]
+                    kuks = True if args[21].lower()=='true' else False
+                    quaas = True if args[22].lower()=='true' else False
+                    moans = True if args[23].lower()=='true' else False
+                    tail_flags = True if args[24].lower()=='true' else False
+                    tail_twitches = True if args[25].lower()=='true' else False
+                    approaches = True if args[26].lower()=='true' else False
+                    indifferent = True if args[27].lower()=='true' else False
+                    runs_from = True if args[28].lower()=='true' else False
+
+                    # running=args[15]
+                    # chasing=args[16]
+                    # climbing=args[17]
+                    # eating=args[18]
+                    # foraging=args[19]
+                    # other_activities=args[20]
+                    # kuks=args[21]
+                    # quaas=args[22]
+                    # moans=args[23]
+                    # tail_flags=args[24]
+                    # tail_twitches=args[25]
+                    # approaches=args[26]
+                    # indifferent=args[27]
+                    # runs_from=args[28]
 
                     Squirrel.objects.create(
                         latitude=latitude, 

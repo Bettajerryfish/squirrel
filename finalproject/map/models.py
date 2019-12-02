@@ -75,22 +75,27 @@ class Squirrel(models.Model):
 
 	running=models.BooleanField(
 		help_text='running',
-		)
+                blank=True, null=True,
+                )
 
 	chasing=models.BooleanField(
 		help_text='chasing',
+                blank=True, null=True,
 		)
 
 	climbing=models.BooleanField(
 		help_text='climbing',
+                blank=True, null=True,
 		)
 
 	eating=models.BooleanField(
 		help_text='eating',
+                blank=True, null=True,
 		)
 
 	foraging=models.BooleanField(
 		help_text='foraging',
+                blank=True, null=True,
 		)
 
 	other_activities=models.CharField(
@@ -100,34 +105,42 @@ class Squirrel(models.Model):
 
 	kuks=models.BooleanField(
 		help_text='kuks',
+                blank=True, null=True,
 		)
 
 	quaas=models.BooleanField(
 		help_text='quaas',
+                blank=True, null=True,
 		)
 
 	moans=models.BooleanField(
 		help_text='moans',
+                blank=True, null=True,
 		)
 
 	tail_flags=models.BooleanField(
 		help_text='tail_flags',
+                blank=True, null=True,
 		)
 
 	tail_twitches=models.BooleanField(
 		help_text='tail_twitches',
+                blank=True, null=True,
 		)
 
 	approaches=models.BooleanField(
 		help_text='approaches',
+                blank=True, null=True
 		)
 
 	indifferent=models.BooleanField(
 		help_text='indifferent',
+                blank=True, null=True
 		)
 
 	runs_from=models.BooleanField(
 		help_text='runs from',
+                blank=True, null=True,
 		)
 	
 	def __str__(self):
