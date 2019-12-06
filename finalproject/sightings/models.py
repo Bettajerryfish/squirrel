@@ -4,7 +4,7 @@ from django.db import models
 from django.utils.translation import gettext as _
 
 # Create your models here.
-class Squirrel(models.Model):
+class Sightings(models.Model):
 
 	latitude = models.FloatField(
 		help_text='latitude',
