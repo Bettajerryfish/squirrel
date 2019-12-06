@@ -39,22 +39,6 @@ class Command(BaseCommand):
                     approaches = True if args[26].lower()=='true' else False
                     indifferent = True if args[27].lower()=='true' else False
                     runs_from = True if args[28].lower()=='true' else False
-
-                    # running=args[15]
-                    # chasing=args[16]
-                    # climbing=args[17]
-                    # eating=args[18]
-                    # foraging=args[19]
-                    # other_activities=args[20]
-                    # kuks=args[21]
-                    # quaas=args[22]
-                    # moans=args[23]
-                    # tail_flags=args[24]
-                    # tail_twitches=args[25]
-                    # approaches=args[26]
-                    # indifferent=args[27]
-                    # runs_from=args[28]
-
                     Squirrel.objects.create(
                         latitude=latitude, 
                         longitude=longitude,
@@ -80,4 +64,3 @@ class Command(BaseCommand):
                         indifferent=indifferent,
                         runs_from=runs_from
                         )
-
