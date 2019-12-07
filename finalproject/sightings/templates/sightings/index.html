@@ -4,17 +4,14 @@
     <title>This is the index page</title>
     </head>
     <body>
-        <h2>Take at look at the squirrels sightings in Central Park at 2018</h2>
+        <h2>Take a look at the squirrels sightings in Central Park at 2018</h2>
         <ul>
         	<li>
-        		<a href="/map/map">Map of the squirrels</a>
+        		<a href='{%url 'sightings:add'%}'>Add some squirrel data</a>
         	</li>
         	<li>
-        		<a href="/map/stats">Add the new data of squirrels</a>
+        		<a href='{% url 'sightings:stats'%}'>Take a glance at the squirresl sighting</a>
         	</li>
-        	<li>
-        		<a href="/map/add">Take a glance at the squirresl sighting</a>
-        	</li>       	
         </ul>
     </body>
 </html>
