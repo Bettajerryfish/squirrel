@@ -31,16 +31,16 @@ def add(request):
     return render(request,'sightings/add.html',context)
 
 
-def update(request, Unique_Squirrel_ID):
-    sighting = squirrels.objects.get(Unique_Squirrel_ID=Unique_Squirrel_ID)
+def update(request, unique_squirrel_id):
+    sighting = squirrels.objects.get(unique_squirrel_id=unique_squirrel_id)
     if request.method=="POST":
         form=SquirrelForm(request.POST,instance=sighting)
-        if form.is_valid()
+        if form.is_valid():
             form.save()
             return redirect('sightings:sighting')
     else:
         form=SquirrelForm(instance=sighting)
-    context={'form':form, 'Unique_Squirrel_ID' = Unique_Squirrel_ID}
+    context={'form':form, 'unique_squirrel_id' = unique_squirrel_id}
     return render(request,'sightings/update.html',context)
 
 # Create your views here.

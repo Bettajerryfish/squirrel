@@ -7,11 +7,10 @@ app_name='sightings'
 urlpatterns = [
 
             path('sightings/', views.sighting, name = 'sightings'),
-            path('home/', views.home, name = 'home'),
-            path('map/', views.map, name = 'map'),
+            path('update/', views.update, name = 'update'),
             path('add/', views.add, name = 'add'),
             path('stats/', views.stats, name = 'stats'),
-            path('<str:unique_squirrel_id>/', views.edit, name = 'edit'),
-            path('<str:unique_squirrel_id>/delete/', views.delete, name = 'delete'),
+            # path('<str:unique_squirrel_id>/', views.edit, name = 'edit'),
+            # path('<str:unique_squirrel_id>/delete/', views.delete, name = 'delete'),
 
              ]
