@@ -11,10 +11,10 @@ def index (request):
 
 def stats(request):
     sq_all=Squirrel.objects.all().count()
-    Run=Squirrel.objects.filter(Running=True).count()
-    Chase=Squirrel.objects.filter(Chasing=True).count()
-    Climb=Squirrel.objects.filter(Climbing=True).count()
-    Eat=Squirrel.objects.filter(Eating=True).count()
+    Run=Squirrel.objects.filter(running=True).count()
+    Chase=Squirrel.objects.filter(chasing=True).count()
+    Climb=Squirrel.objects.filter(climbing=True).count()
+    Eat=Squirrel.objects.filter(eating=True).count()
     context={'Run':Run,'Chase':Chase,'Climb':Climb,'Eat':Eat,'sq_all':sq_all,}
     return render(request,'sightings/stats.html',context)
 
@@ -32,7 +32,7 @@ def add(request):
 
 
 def update(request, unique_squirrel_id):
-    sighting = squirrels.objects.get(unique_squirrel_id=unique_squirrel_id)
+    sighting = Squirrels.objects.get(unique_squirrel_id=unique_squirrel_id)
     if request.method=="POST":
         form=SquirrelForm(request.POST,instance=sighting)
         if form.is_valid():
