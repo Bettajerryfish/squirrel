@@ -15,7 +15,7 @@ def stats(request):
     Chase=Squirrel.objects.filter(chasing=True).count()
     Climb=Squirrel.objects.filter(climbing=True).count()
     Eat=Squirrel.objects.filter(eating=True).count()
-    context={'Run':Run,'Chase':Chase,'Climb':Climb,'Eat':Eat,'sq_all':sq_all,}
+    context={'Run':Run,'Chase':Chase,'Climb':Climb,'Eat':Eat,'Total_Num':Total_Num,}
     return render(request,'sightings/stats.html',context)
 
 def add(request):
