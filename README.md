@@ -27,7 +27,7 @@ A view that shows a map that displays the location of the squirrel sightings on 
 ```
 Located at: /map
 Methods Supported: GET
-Reference: Use [Leafletjs](https://leafletjs.com/) library for plotting 
+Reference: Use [Leafletjs]:(https://leafletjs.com/) library for plotting 
 ```
 A view that lists all squirrel sightings with links to edit each
 
