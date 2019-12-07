@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,get_object_or_404
 
 from django.http import HttpResponse,HttpResponseRedirect
 from map.models import Squirrel
@@ -31,16 +31,24 @@ def add(request):
     return render(request,'sightings/add.html',context)
 
 
+#def update(request, unique_squirrel_id):
+ #   sighting = get_object_or_404(Squirrel,unique_squirrel_id=unique_squirrel_id)
+  #  if request.method=="POST":
+   #     form=SquirrelForm(request.POST,instance=sighting)
+    #    if form.is_valid():
+     #       form.save()
+      #      return redirect('sightings:index')
+ #   else:
+  #      form=SquirrelForm(instance=sighting)
+  #  context={'form':form}
+   # return render(request,'sightings/update.html',context)
 def update(request, unique_squirrel_id):
-    sighting = Squirrel.objects.get(unique_squirrel_id=unique_squirrel_id)
-    if request.method=="POST":
-        form=SquirrelForm(request.POST,instance=sighting)
+    edit_sighting = get_object_or_404(Squirrel, unique_squirrel_id=unique_squirrel_id)
+    if request.method == "POST":
+        form = SquirrelForm(request.POST, instance=edit_sighting)
         if form.is_valid():
             form.save()
-            return redirect('sightings:index')
-    else:
-        form=SquirrelForm(instance=sighting)
-    context={'form':form, 'unique_squirrel_id' : unique_squirrel_id}
-    return render(request,'sightings/update.html',context)
-
+            return redirect("/sightings/")
+    form = SquirrelForm(instance=edit_sighting)
+    return render(request, "sightings/update.html", {"form": form, "unique_squirrel_id":unique_squirrel_id})
 # Create your views here.
