@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Update the squirrels sightings</title>
+    </head>
+    <body>
+  	<div class="miniwrap">
+    	<form  method="POST" id="updatesquirrel">
+        	{% csrf_token %}
+			{{form.as_p}}
+		
+        	<input type="submit" name='Submit'>
+        	<br>
+    		</form>	
+    </div> 
+    </body>
+</html>
