@@ -4,10 +4,10 @@ from django.http import HttpResponse,HttpResponseRedirect
 from map.models import Squirrel
 from .forms import SquirrelForm
 # Create your views here.
-def sighting (request):
+def index (request):
     sightings=Squirrel.objects.all()
     context={'sightings':sightings,} 
-    return render(request,"sightings/sighting.html",context)
+    return render(request,"sightings/index.html",context)
 
 def stats(request):
     sq_all=Squirrel.objects.all().count()
@@ -23,7 +23,7 @@ def add(request):
         form=SquirrelForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('sightings:sighting')
+            return redirect('sightings:index')
     else:
         form=SquirrelForm()
 
@@ -37,7 +37,7 @@ def update(request, unique_squirrel_id):
         form=SquirrelForm(request.POST,instance=sighting)
         if form.is_valid():
             form.save()
-            return redirect('sightings:sighting')
+            return redirect('sightings:index')
     else:
         form=SquirrelForm(instance=sighting)
     context={'form':form, 'unique_squirrel_id' : unique_squirrel_id}
