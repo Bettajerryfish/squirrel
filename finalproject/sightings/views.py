@@ -40,7 +40,7 @@ def update(request, unique_squirrel_id):
             return redirect('sightings:sighting')
     else:
         form=SquirrelForm(instance=sighting)
-    context={'form':form, 'unique_squirrel_id' = unique_squirrel_id}
+    context={'form':form, 'unique_squirrel_id' : unique_squirrel_id}
     return render(request,'sightings/update.html',context)
 
 # Create your views here.
