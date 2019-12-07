@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang = "en">
     <head>
-    <title>This is the index page</title>
+    <title>This is the home page</title>
     </head>
     <body>
         <h3>Take a look at the squirrels sightings in Central Park at 2018</h3>
@@ -12,18 +12,21 @@
             <li>
                 <a href='{% url 'sightings:stats'%}'>Take a glance at the squirresl sighting statistics</a>
             </li>
+	    <li>
+		<a href="/map">This is the map</a>
+	    </li>
         </ul>
 
-        <h3>These is a list of all sightings. Click each link to see details! </h3> 
+        <h3>List of every squirrel with ID </h3> 
             {%if sightings%}
                 <ul>
                     {%for sighting in sightings%}
                     <li>{{sighting}}</li>
-                    <a href='{% url 'sightings:update' unique_squirrel_id=sighting.unique_squirrel_id%}'>Update it</a>
+                    <a href='{% url 'sightings:update' unique_squirrel_id=sighting.unique_squirrel_id%}'>Add some data</a>
                     {%endfor%}
                 </ul>
             {% else %}
-                <p>Please try another sighting</p>
+                <p>Please try another squirrel</p>
             {%endif%}
     </body>
 </html>
