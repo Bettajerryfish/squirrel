@@ -5,7 +5,7 @@ from map.models import Squirrel
 from .forms import SquirrelForm
 # Create your views here.
 def sighting (request):
-    sightings=Squirrels.objects.all()
+    sightings=Squirrel.objects.all()
     context={'sightings':sightings,} 
     return render(request,"sightings/sighting.html",context)
 
@@ -35,7 +35,7 @@ def update(request, Unique_Squirrel_ID):
     sighting = squirrels.objects.get(Unique_Squirrel_ID=Unique_Squirrel_ID)
     if request.method=="POST":
         form=SquirrelForm(request.POST,instance=sighting)
-        if form.is_valid():
+        if form.is_valid()
             form.save()
             return redirect('sightings:sighting')
     else:
