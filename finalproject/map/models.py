@@ -16,8 +16,8 @@ class Squirrel(models.Model):
 		help_text='unique_squirrel_id',
 		max_length=32,
 		)
-	AM='am'
-	PM='pm'
+	AM='Am'
+	PM='Pm'
 	shift = models.CharField(
 		help_text='shift',
 		max_length=16,
@@ -30,8 +30,8 @@ class Squirrel(models.Model):
 	date = models.DateField(
 		help_text='date',
 		)
-	Adult='adult'
-	Juvenile='juvenile'
+	Adult='Adult'
+	Juvenile='Juvenile'
 	age_choice=(
 		(Adult,"Adult"),
 		(Juvenile,"Juvenile"),
@@ -42,9 +42,9 @@ class Squirrel(models.Model):
 		choices=age_choice,
 		)
 
-	Gray='gray'
-	Black='black'
-	Cinnamon='cinnamon'
+	Gray='Gray'
+	Black='Black'
+	Cinnamon='Cinnamon'
 	primary_fur_color_choice=(
 		(Gray,'Gray'),
 		(Black,'Black'),
@@ -56,8 +56,8 @@ class Squirrel(models.Model):
 		choices=primary_fur_color_choice,
 		)
 
-	Ground_Plane='ground plane'
-	Above_Ground='above ground'
+	Ground_Plane='Ground Plane'
+	Above_Ground='Above Ground'
 	location_choice=(
 		(Ground_Plane,'Ground Plan'),
 		(Above_Ground,'Above Ground'),
