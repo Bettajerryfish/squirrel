@@ -60,9 +60,11 @@ Method: GET
 ```
 Group Name: Project Group sq, Section 2
 UNI for group members: jc5298, zw2633
-Link to server running app: 
-```
+Link to server running app: https://radiant-indexer-255500.appspot.com
 
+```
+## Other 
+For some reasons, The deployments was failed by processed, but we created a copy of Github including all original file without any update, and the deployments was succeeded by Google App Engine 
 
 
 
