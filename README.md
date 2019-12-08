@@ -64,7 +64,10 @@ Link to server running app: https://radiant-indexer-255500.appspot.com
 
 ```
 ## Other 
-For some reasons, The deployments was failed by processed, but we created a copy of Github including all original file without any update, and the deployments was succeeded by Google App Engine 
+```
+For some reasons, The deployment was failed to process, but we created a copy of Github including all original files without any change, and the deployment was surprisingly succeeded by Google App Engine. 
+The repo of copy is written below, please check:
 
-
+https://github.com/Bettajerryfish/test.git
+```
 
